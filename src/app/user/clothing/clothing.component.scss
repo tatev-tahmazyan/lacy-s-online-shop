@@ -1,0 +1,99 @@
+@mixin displayflex($display,$flexDirection,$justifyContent,$alignItems){
+  display: $display;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin img($width,$height,$objectFit){
+  width: $width;
+  height: $height;
+  object-fit: $objectFit;
+}
+
+.app-clothing{
+  display: flex;
+	margin-top: 90px;
+  overflow: auto;
+  height: 100%;
+}
+
+  /*.app-clothing__price-filter-container{
+    position: fixed;
+    height: 100%;
+    width: 13%;
+    margin: 0 10px 0 0;
+    padding: 20px;
+    z-index: 19;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    box-shadow: 0 10px 10px -5px;
+  }
+
+  .app-clothing__price-filter-item{
+    padding: 2px;
+
+    &:hover{
+      font-size: 17px;
+    }
+  }
+*/
+  .app-clothing__price-filter-title{
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+.app-clothing-list{
+  @include displayflex(flex,row,flex-start,flex-start);
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 0 0 250px;
+
+  .app-clothing-list__item{
+    position: relative;
+    margin: 0 10px 30px 20px;
+
+    &:hover {
+      .app-clothing-list__heart {
+        opacity: 1;
+        background-color: white;
+
+        &:hover {
+          color: black;
+        }
+
+        &--selected {
+          color: red;
+        }
+      }
+    }
+  }
+
+  .app-clothing-list__heart{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 6px;
+    padding: 3px;
+    cursor: pointer;
+    color: silver;
+    opacity: 0;
+    transition: 0.25s linear all;
+  }
+
+  .app-clothing-list__new-item{
+    position: absolute;
+    left: 0;
+    top:20px;
+    padding: 0 20px;
+    font-weight: 600;
+    font-family: serif;
+    color: white;
+    background-color: rgb(173 138 41 / 48%);
+  }
+
+  .app-clothing-list__img{
+    @include img(300px,480px,cover);
+  }
+}

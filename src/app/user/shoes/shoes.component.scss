@@ -1,0 +1,72 @@
+@mixin displayflex($display,$flexDirection,$justifyContent,$alignItems){
+  display: $display;
+  flex-direction: $flexDirection;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin img($width,$height,$objectFit){
+  width: $width;
+  height: $height;
+  object-fit: $objectFit;
+}
+
+.app-shoes{
+	margin-top: 90px;
+  overflow: auto;
+  height: 100%;
+}
+
+.app-shoes-list{
+  @include displayflex(flex,row,flex-start,flex-start);
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 0 auto;
+
+  .app-shoes-list__item{
+    position: relative;
+    margin: 0 10px 30px 10px;
+
+    &:hover {
+      .app-shoes-list__heart {
+        opacity: 1;
+        background-color: white;
+
+        &:hover {
+          color: black;
+        }
+
+        &--selected {
+          color: red;
+        }
+      }
+    }
+  }
+
+  .app-shoes-list__heart{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 6px;
+    padding: 3px;
+    cursor: pointer;
+    color: silver;
+    opacity: 0;
+    transition: 0.25s linear all;
+  }
+
+  .app-shoes-list__new-item{
+    position: absolute;
+    left: 0;
+    top:20px;
+    padding: 0 20px;
+    font-weight: 600;
+    font-family: serif;
+    color: white;
+    background-color: rgb(173 138 41 / 48%);
+  }
+
+  .app-shoes-list__img{
+    @include img(300px,480px,cover);
+  }
+}
