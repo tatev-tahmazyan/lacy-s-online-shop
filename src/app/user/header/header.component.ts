@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 import {MatDialog} from "@angular/material/dialog";
-import {LoginComponent} from "../login/login.component";
+import {LoginComponent} from "../../login/login.component";
+import {AppService} from '../../app.service';
 
 
 @Component({
@@ -12,13 +13,14 @@ import {LoginComponent} from "../login/login.component";
 export class HeaderComponent implements OnInit {
 	public isUserLogIn = false;
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+              private appService: AppService) { }
 
   ngOnInit(): void {
   }
   openDialog() {
-  	this.isUserLogIn = true;
-  	this.dialog.open(LoginComponent); 
+  	this.isUserLogIn = !this.appService.isAdminPageShow;
+  	this.dialog.open(LoginComponent);
   }
 
 

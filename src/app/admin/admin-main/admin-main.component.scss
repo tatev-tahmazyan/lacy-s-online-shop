@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Syncopate");
+
+.app-admin-container{
+	margin-top: 90px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.app-admin{
+		width: 90%;
+	}
+
+	table {
+		margin: 15px 0;
+	  width: 100%;
+	  background-color: silver;
+	  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+	}
+	td{
+		width: 33%;
+		padding: 6px;
+		text-align: center;
+	}
+	tr{
+		margin: 1px 0;
+	}
+
+	.mat-form-field {
+	  font-size: 14px;
+	  width: 100%;
+	}
+
+	.app-admin-partner__remove{
+		opacity: 0;
+		color: silver;
+		cursor: pointer;
+		transition: 0.25s linear all;
+	}
+
+/*	.app-admin-partner__row{
+		color: black;
+
+		&:hover {
+      .app-admin-partner__remove {
+        opacity: 1;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+	}*/
+
+	.app-admin__item{
+		color: black;
+
+		&:hover {
+      .app-admin-partner__remove {
+        opacity: 1;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+	}
+
+	.app-admin__title-list {
+		margin: 18px 0;
+		text-align: center;
+		font-family: 'Syncopate', Helvetica, Arial;
+		font-weight: 600;
+	}
+
+}
