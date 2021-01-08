@@ -18,15 +18,17 @@
             $60.00 - $80.00
           </li>
         </ul>
+
+          <div>
+          <div>Do you wanna items from wish list</div>
+          <mat-radio-group aria-label="Select an option">
+          <mat-radio-button value="1" (click) = "filtredByWishList(true)">Yes</mat-radio-button>
+          <mat-radio-button value="2" (click) = "filtredByWishList(false)">No</mat-radio-button>
+        </mat-radio-group>
+        </div>
       </div>
 
-      <div>
-        <div>Do you wanna items from wish list</div>
-        <mat-radio-group aria-label="Select an option">
-        <mat-radio-button value="1" (click) = "filtredByWishList(true)">Yes</mat-radio-button>
-        <mat-radio-button value="2" (click) = "filtredByWishList(false)">No</mat-radio-button>
-      </mat-radio-group>
-      </div>
+      
 
 
       

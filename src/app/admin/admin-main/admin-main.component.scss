@@ -25,6 +25,12 @@
 	}
 	tr{
 		margin: 1px 0;
+		background-color: #fff;
+
+		&:hover{
+			background-color: silver;
+
+		}
 	}
 
 	.mat-form-field {

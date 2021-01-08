@@ -56,13 +56,13 @@ export class AdminMainComponent {
 
 	public partnerList: Array<any> = [
 
-		{ id : 0, partner : 'Nike', remove : 'highlight_off'},
-    { id : 1, partner : 'Adidas', remove : 'highlight_off'},
-    { id : 2, partner : 'Puma', remove : 'highlight_off'},
-    { id : 3, partner : 'Levis', remove : 'highlight_off'},
-    { id : 4, partner : 'Pandora', remove : 'highlight_off'},
-    { id : 5, partner : 'Gucci', remove : 'highlight_off'},
-    { id : 6, partner : 'Louis Vuitton', remove : 'highlight_off'},
+		{ id : 0, partner : 'Nike', remove : 'highlight_off', showPartner : true},
+    { id : 1, partner : 'Adidas', remove : 'highlight_off', showPartner : true},
+    { id : 2, partner : 'Puma', remove : 'highlight_off', showPartner : true},
+    { id : 3, partner : 'Levis', remove : 'highlight_off', showPartner : true},
+    { id : 4, partner : 'Pandora', remove : 'highlight_off', showPartner : true},
+    { id : 5, partner : 'Gucci', remove : 'highlight_off', showPartner : true},
+    { id : 6, partner : 'Louis Vuitton', remove : 'highlight_off', showPartner : true},
 	];
 	
 	// displayedColumns1: string[] = ['position', 'name', 'price', 'date'];
@@ -80,8 +80,8 @@ export class AdminMainComponent {
   //   this.dataSource1.filter = filterValue.trim().toLowerCase();
   // }
 
-  removePartner(item: any) : void{
-  	// this.partnerList
+  removePartner(item : any) : void{
+  	item.showPartner = false;
   }
 
 }
