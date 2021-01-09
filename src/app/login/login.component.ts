@@ -18,10 +18,10 @@ export class LoginComponent implements OnInit {
 
   login(username: string, password: string): void {
     if ((username === 'admin')) {
-      this.appService.isAdminPageShow = true;
+      AppService.isAdminPageShow = true;
       this.routing.navigateByUrl('/admin-main');
     } else {
-      this.appService.isAdminPageShow = false;
+      AppService.isAdminPageShow = false;
       this.routing.navigateByUrl('/home');
     }
   }

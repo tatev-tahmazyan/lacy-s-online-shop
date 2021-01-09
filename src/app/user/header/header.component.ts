@@ -11,7 +11,7 @@ import {AppService} from '../../app.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-	public isUserLogIn = false;
+	public isUserLogIn = AppService.isAdminPageShow;
 
   constructor(public dialog: MatDialog,
               private appService: AppService) { }
@@ -19,7 +19,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
   openDialog() {
-  	this.isUserLogIn = !this.appService.isAdminPageShow;
+  	this.isUserLogIn = !AppService.isAdminPageShow;
+    console.log(AppService.isAdminPageShow);
   	this.dialog.open(LoginComponent);
   }
 

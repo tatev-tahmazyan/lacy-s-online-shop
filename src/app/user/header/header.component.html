@@ -5,7 +5,8 @@
 
 
   	<div class="app-main-header-button-group">
-      <button mat-icon-button aria-label="Example icon button with a heart icon" *ngIf="!isUserLogIn" (click)="openDialog()">
+      {{isUserLogIn}}
+      <button mat-icon-button aria-label="Example icon button with a heart icon" (click)="openDialog()">
         <span class="material-icons">login</span>
       </button>
 

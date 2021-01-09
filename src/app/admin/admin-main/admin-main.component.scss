@@ -42,22 +42,8 @@
 		opacity: 0;
 		color: silver;
 		cursor: pointer;
-		transition: 0.25s linear all;
+		
 	}
-
-/*	.app-admin-partner__row{
-		color: black;
-
-		&:hover {
-      .app-admin-partner__remove {
-        opacity: 1;
-
-        &:hover {
-          color: black;
-        }
-      }
-    }
-	}*/
 
 	.app-admin__item{
 		color: black;
@@ -65,6 +51,7 @@
 		&:hover {
       .app-admin-partner__remove {
         opacity: 1;
+        color: #525252;
 
         &:hover {
           color: black;

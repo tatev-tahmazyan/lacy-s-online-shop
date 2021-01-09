@@ -5,7 +5,7 @@ import {Injectable} from '@angular/core';
 })
 
 export class AppService {
-  public isAdminPageShow = false;
+  public static isAdminPageShow = false;
 }
 
 
